@@ -1,0 +1,25 @@
+  kafka:
+    enabled: true
+  user:
+    create: true
+    email: <REDACTED>
+    password: <REDACTED>
+  asHook: true
+  sentry:
+    singleOrganization: false
+    worker:
+      replicas: 2  
+  auth:
+    register: false
+  hooks:
+    activeDeadlineSeconds: 6500
+  ingress:
+    enabled: false  
+  nginx:
+    enabled: false
+  clickhouse:
+    enabled: true
+    clickhouse:
+      replicas: "1"  
+  postgresql:
+    enabled: true  

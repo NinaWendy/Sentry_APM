@@ -25,6 +25,11 @@ These challenges lead to:
 - **Higher operational costs**
 
 ### ✅ The Solution: Sentry
+
+> What's Sentry?
+Sentry is the debugging platform that helps every developer detect, trace, and fix issues. Code breaks, fix it faster.
+
+        
 Sentry is a powerful open-source platform that enables:
 - **Real-time error tracking across frontend, backend, and mobile**
 - **Detailed stack traces for faster debugging**
