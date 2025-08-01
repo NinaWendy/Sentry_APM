@@ -24,6 +24,9 @@ Resource usage is high—up to ~13 GB RAM at rest—so plan node sizing accordin
 
 `nano values.yaml`
 
+**Note:**
+You can either use the `values.yaml`, `value.yaml` plus `ingres.yaml` or `custom-values.yaml` according to your use case.
+
 ```
 microk8s helm3 install sentry sentry/sentry \
   -f values.yaml \

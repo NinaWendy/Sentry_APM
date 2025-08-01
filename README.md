@@ -1,17 +1,14 @@
-# 🛡️ Sentry Self-Hosted Monitoring Setup
+# Sentry Self-Hosted Monitoring Setup
 
 ## 📌 Project Overview
 
-This project involves setting up **Sentry** as a centralized error and performance monitoring solution for modern applications. It demonstrates my ability to proactively detect, triage, and resolve issues in production systems—improving overall reliability and reducing Mean Time to Recovery (MTTR). 
-
-> 🛠️ Implemented and configured by: Wendy Nina  
-> 🧠 Role: Site Reliability Engineer (SRE)
+This project involves setting up **Sentry** as a centralized error and performance monitoring solution for modern applications. It demonstrates my ability to proactively detect, triage, and resolve issues in production systems improving overall reliability and reducing Mean Time to Recovery (MTTR). 
 
 ---
 
-## ❓ Why This Solution?
+## ❓ Why Sentry?
 
-### 🚨 The Problem
+### 🚨 Problem
 Many engineering teams suffer from:
 - **Delayed awareness of production issues**
 - **Lack of visibility into root causes**
@@ -24,13 +21,12 @@ These challenges lead to:
 - **Reduced confidence in the product**
 - **Higher operational costs**
 
-### ✅ The Solution: Sentry
+### ✅ Solution: Sentry
 
-> What's Sentry?
-Sentry is the debugging platform that helps every developer detect, trace, and fix issues. Code breaks, fix it faster.
+> Sentry is a leading open-source error monitoring and performance analysis tool that helps developers **identify, triage, and resolve issues faster** across web, mobile, and backend applications.
 
         
-Sentry is a powerful open-source platform that enables:
+Sentry enables:
 - **Real-time error tracking across frontend, backend, and mobile**
 - **Detailed stack traces for faster debugging**
 - **Performance monitoring for tracing slow transactions**
@@ -43,26 +39,32 @@ By deploying **self-hosted Sentry**, we:
 
 ---
 
-## 🎯 Goals and Business Value
+## 🚀 Business Value
 
-| Goal                             | Value to Organization                                              |
-|----------------------------------|---------------------------------------------------------------------|
-| 📉 Reduce MTTR                   | Engineers get notified and debug faster with actionable insights.  |
-| 🔍 Improve Visibility            | Complete observability across services and environments.           |
-| 🧪 Shift-Left Error Detection    | Catch errors earlier in the development lifecycle.                 |
-| 💼 Cost-Efficient Observability  | Open-source, scalable alternative to SaaS error tracking tools.    |
-| 🔐 Data Sovereignty              | Keeps sensitive telemetry data within internal infrastructure.     |
+| Impact Area                 | Outcome                                                                                                                 |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Developer Efficiency**    | Developers spend less time debugging and more time building features, reducing mean time to resolution (MTTR).          |
+| **Product Quality**         | Proactive error tracking reduces user-facing bugs and improves customer experience.                                     |
+| **Operational Visibility**  | Sentry integrates with logs and traces to give full-stack visibility, helping ops and SREs pinpoint problems.           |
+| **Cost Optimization**       | Self-hosting avoids recurring SaaS costs, while MicroK8s offers a lightweight and scalable platform for internal teams. |
+| **Security and Compliance** | Keeps sensitive logs and error traces within internal infrastructure—ideal for regulated industries.                    |
+
+
 
 ---
 
 ## ⚙️ Technologies Used
 
-- 🔧 **Sentry (Self-Hosted)** – Error tracking and performance monitoring
-- 🐳 **Docker / Docker Compose** – Container orchestration for rapid setup
-- 📦 **PostgreSQL** – Persistent store for Sentry metadata
-- ☁️ **ClickHouse, Kafka, Redis** – Required for performance and event ingestion
-- 🖥️ **Nginx** – Reverse proxy for secure access
-- 🧪 **Sample App** – Elixir app integrated with Sentry SDK
+- **Sentry (Self-Hosted)** – Error tracking and performance monitoring
+- **Docker / Docker Compose** – Container orchestration for rapid setup
+- **PostgreSQL** – Persistent store for Sentry metadata
+- **ClickHouse, Kafka** – Required for performance and event ingestion
+- **Nginx** – Reverse proxy for secure access
+- **MicroK8s** – Lightweight Kubernetes for local and edge deployments
+- **Helm** – Kubernetes package manager used to deploy Sentry
+- **Redis** – Queuing and caching for Sentry
+- **Nginx Ingress Controller** – Routing traffic to Sentry web interface
+- **Persistent Volumes** – For storing sentry data, logs, etc.
 
 
 ---
@@ -81,20 +83,17 @@ By deploying **self-hosted Sentry**, we:
 * Dashboards created to track error frequency, affected users, and release regressions.
 * Alerts set up for critical services with escalation rules to on-call engineers.
 
----
+| ![](./images/1.new-project.png) | ![](./images/2.app.png) |
+|:------------------------------:|:------------------------:|
+| **Create a New Project**       | **Setup Error Tracking with SDK** |
 
-## 🧠 Lessons Learned
-
-* Importance of **alert fatigue** management (noise reduction strategies).
-* Continuous improvement of alerts with postmortems.
-* Encouraging a **blameless culture** by focusing on fast recovery, not finger-pointing.
-
----
+| ![](./images/3.setup.png)       | ![](./images/4.replay.png) |
+|:------------------------------:|:---------------------------:|
+| **Capturing App Errors** | **Replay & Debug Errors**  |
 
 ## 🏁 Future Work
 
 * Automate setup via Ansible or Terraform
-* Multi-tenant support for multiple teams
 * Fine-grained role-based access control (RBAC)
 
 ---
